@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SatGear Guide · Used Newtec / iDirect MCX7000, MDM6100, M6100, MCD6000 prices &amp; licence checklist</title>
+<meta name="description" content="What is a used Newtec / iDirect MCX7000, MDM6100, M6100 or MCD6000 worth? Asking prices from real public listings with source links, clearly labelled estimates, and an MCX7000 licence checklist (VI-01 GbE TSoIP UDP/RTP, VP-01/VP-02, DR-01/DR-02, SR-xx, HS-05 ASI, Equalink).">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0f172a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="SatGear Guide">
+<meta property="og:title" content="SatGear Guide · Used satellite modem prices &amp; licence checklist">
+<meta property="og:description" content="Verified asking prices with sources for used Newtec / iDirect broadcast gear, plus an MCX7000 licence checklist builder. Free beta.">
+<meta property="og:url" content="https://ivancet.github.io/satgear-guide/">
+<meta property="og:image" content="https://ivancet.github.io/satgear-guide/icon-512.png">
+<link rel="canonical" href="https://ivancet.github.io/satgear-guide/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SatGear Guide","url":"https://ivancet.github.io/satgear-guide/","applicationCategory":"BusinessApplication","operatingSystem":"Web","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"description":"Used satellite and broadcast equipment price guide with sourced listings and an MCX7000 licence checklist."}</script>
+</head>
+<body>
+<div class="beta-bar">Beta: asking prices from public listings, not sold prices. Estimates are labelled. Not an offer to buy or sell.</div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#">Sat<span>Gear</span> Guide</a>
+    <nav><a href="#prices">Prices</a><a href="#licences">Licences</a><a href="#checks">Checks</a><a href="#contact">Quote</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Newtec · iDirect · ST Engineering broadcast satellite gear</p>
+    <h1>What's that used modem <em>really</em> worth?</h1>
+    <p class="lead">Asking prices for the MCX7000, MDM6100, M6100 and MCD6000, each with a link to the listing it came from. Where there's no public price, the figure is marked as an estimate and explained. Then work out which licences a unit actually needs, because on these boxes the licences decide the price.</p>
+    <div class="cta"><a class="btn" href="#prices">See prices</a><a class="btn ghost" href="#licences">Build a licence checklist</a></div>
+    <p class="small muted" id="checkedNote"></p>
+  </div>
+</section>
+
+<section id="prices" class="wrap sect">
+  <div class="app-head"><h2>Price guide</h2>
+    <div class="seg" id="curSeg" role="group" aria-label="Currency"><button data-c="EUR" class="on">EUR</button><button data-c="USD">USD</button></div>
+  </div>
+  <div class="models" id="models"></div>
+  <h3>All listings</h3>
+  <div class="row gap"><label class="inline">Model <select id="flt"><option value="">All</option></select></label><label class="inline chk"><input type="checkbox" id="pricedOnly"> Priced only</label></div>
+  <div class="tbl-wrap"><table class="qt" id="lst"><thead><tr><th>Model</th><th>Seller</th><th>Asking price</th><th>≈ <span class="curLbl">EUR</span></th><th>Condition</th><th>Notes</th><th>Source</th></tr></thead><tbody></tbody></table></div>
+  <p class="small muted" id="fxNote"></p>
+</section>
+
+<section id="licences" class="wrap sect">
+  <h2>MCX7000 licence checklist</h2>
+  <p class="muted">Tick what the unit has to do. You get the ordering codes to look for on the seller's licence screenshot, plus any conflicts. Codes come from the MCX7000 R1.0 datasheet.</p>
+  <div class="grid">
+    <form id="needs" class="panel" autocomplete="off">
+      <fieldset><legend>Role</legend>
+        <label class="chk"><input type="checkbox" name="tx"> Transmit (modulator)</label>
+        <label class="chk"><input type="checkbox" name="rx" checked> Receive (demodulator)</label>
+        <label>Demodulated carriers<select name="demods"><option>1</option><option>2</option><option>3</option></select></label>
+        <label>Input / output<select name="input"><option value="ip">IP only: GbE, TS over UDP/RTP</option><option value="both">IP + ASI</option><option value="asi">ASI only</option></select></label>
+      </fieldset>
+      <fieldset><legend>Modulator (if transmitting)</legend>
+        <label>Max symbol rate<select name="modRate"><option value="72">72 MBaud</option><option value="133">133 MBaud</option></select></label>
+        <label>Modulation<select name="modOrder"><option value="32apsk">Up to 16/32APSK</option><option value="256apsk">Up to 256APSK</option></select></label>
+        <label>Output<select name="out"><option value="L">L-band</option><option value="IF">IF 50–180 MHz</option><option value="both">IF + L-band</option></select></label>
+        <label class="chk"><input type="checkbox" name="equalink"> Equalink 3 pre-distortion</label>
+      </fieldset>
+      <fieldset><legend>Demodulator (if receiving)</legend>
+        <label>Max symbol rate<select name="demodRate"><option value="72">72 MBaud</option><option value="133">133 MBaud</option></select></label>
+        <label>Modulation<select name="demodOrder"><option value="32apsk">Up to 16/32APSK</option><option value="256apsk">Up to 256APSK</option></select></label>
+      </fieldset>
+      <fieldset><legend>Extras</legend>
+        <label class="chk"><input type="checkbox" name="biss"> BISS scrambling</label>
+        <label class="chk"><input type="checkbox" name="mpe"> MPE data insertion</label>
+        <label class="chk"><input type="checkbox" name="dualPsu"> Dual redundant PSU</label>
+        <label class="chk"><input type="checkbox" name="refOut"> 10 MHz reference out</label>
+        <label class="chk"><input type="checkbox" name="hiStab"> Very high stability clock</label>
+      </fieldset>
+    </form>
+    <div class="panel" id="chkOut">
+      <h3 class="m0">Look for these codes</h3>
+      <div id="conflicts"></div>
+      <table class="qt codes"><tbody id="codeRows"></tbody></table>
+      <ul id="chkNotes" class="small muted"></ul>
+      <div class="row gap"><button class="btn sm" id="copyChk">Copy checklist</button><a class="btn ghost sm" href="#contact" id="useInQuote">Use in quote request</a></div>
+    </div>
+  </div>
+  <details class="ref"><summary>Full MCX7000 R1.0 option code reference</summary><div class="tbl-wrap"><table class="qt" id="refTbl"><tbody></tbody></table></div><p class="small muted">* = activated by licence key. Datasheet for later releases: <a id="dsLink" target="_blank" rel="noopener">iDirect MCX7000 product sheet (PDF)</a>.</p></details>
+</section>
+
+<section id="checks" class="wrap sect">
+  <h2>Before you pay: questions for the seller</h2>
+  <ol class="qs" id="qs"></ol>
+  <div class="card tip"><b>Need IP input (UDP / RTP)?</b> On the MCX7000 that's <b>VI-01</b> (GbE TSoIP with SMPTE 2022 FEC), which only works with a video package: <b>VP-01</b> to transmit, or <b>VP-02</b> for receive only. Only pay for <b>VI-02</b> and the <b>HS-05</b> ASI board if you really need ASI. On these units ASI uses slot 3, so you lose the third demodulator.</div>
+</section>
+
+<section id="contact" class="wrap sect">
+  <h2>Request a quote / sell your gear</h2>
+  <p class="muted" id="contactState"></p>
+  <div class="grid">
+    <form id="req" class="panel" autocomplete="off">
+      <fieldset><legend>Request</legend>
+        <label>I want to<select name="intent"><option value="buy">Buy</option><option value="sell">Sell</option></select></label>
+        <label>Model<input name="model" list="modelList" placeholder="MCX7000"></label>
+        <label>Quantity<input name="qty" type="number" min="1" value="1"></label>
+        <label>Condition<select name="condition"><option>Any</option><option>New</option><option>Used, tested</option><option>For parts</option></select></label>
+        <label class="full">Configuration / licences<textarea name="config" rows="2" placeholder="e.g. VI-01, VP-01, DL-02, DR-02, SR-06, OU-00"></textarea></label>
+        <label>Target price<input name="price" placeholder="e.g. €6,000"></label>
+        <label>Country<input name="country" placeholder="Ship to / from"></label>
+        <label class="full">Notes<textarea name="notes" rows="2"></textarea></label>
+      </fieldset>
+      <fieldset><legend>You</legend>
+        <label>Name<input name="name"></label><label>Company<input name="company"></label>
+        <label class="full">Your email<input name="email" type="email"></label>
+      </fieldset>
+      <datalist id="modelList"></datalist>
+    </form>
+    <div class="panel">
+      <h3 class="m0">Your message</h3>
+      <label class="full">Subject<input id="rqSubj" readonly></label>
+      <textarea id="rqBody" rows="14" readonly></textarea>
+      <div class="row gap"><a class="btn sm" id="rqMail" href="#">Open in my email</a><button class="btn ghost sm" id="rqCopy">Copy</button></div>
+      <p class="small muted">Nothing is sent from this site. Your email app opens with the message ready, and you decide whether to send it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap sect faq">
+  <h2>How these numbers are made</h2>
+  <details open><summary>Listings</summary><p>Every priced row was opened and read on the date shown. These are <b>asking</b> prices; dealers usually take less, and eBay "or best offer" listings sell below the ask. USD is converted at the ECB reference rate on that date. Shipping, VAT and import duties are not included.</p></details>
+  <details><summary>Estimates</summary><p>The MCX7000 and MDM6100 show no public price anywhere we looked: dealers only quote. Their ranges are <b>estimates</b> built from the priced siblings on the same hardware generation, with the reasoning shown on each card. Treat them as a starting point for negotiation, not as market data.</p></details>
+  <details><summary>Why licences matter more than the box</summary><p>Newtec units are sold "pay-as-you-grow": the same chassis can be a single 72 MBaud demod or a 3 × 133 MBaud gateway, depending on licence keys tied to the serial number. A unit with the wrong licences may cost more to upgrade than buying a better-licensed one.</p></details>
+</section>
+
+<footer class="foot wrap">
+  <p><b>SatGear Guide</b> (beta). Independent and not affiliated with ST Engineering iDirect or Newtec. Trademarks belong to their owners.</p>
+  <p class="small muted">Information only, no warranty. No cookies or analytics. Form contents stay in your browser.</p>
+</footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="config.js"></script>
+<script src="data.js"></script>
+<script src="guide.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
